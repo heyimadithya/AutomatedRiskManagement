@@ -54,31 +54,23 @@ Availability depends on Yahoo coverage; some futures / FX spot symbols can be de
 
 ### Math (short)
 
-**Historical VaR (confidence \(c\))** — empirical quantile of the left tail:
+**Historical VaR** (confidence \(c\)) — empirical quantile of the left tail:
 
-\[
-\mathrm{VaR}_c = -Q_{1-c}(r)
-\]
+$$\mathrm{VaR}_c = -Q_{1-c}(r)$$
 
 **Parametric VaR** — normal assumption:
 
-\[
-\mathrm{VaR}_c = -(\mu + z_{1-c}\,\sigma)
-\]
+$$\mathrm{VaR}_c = -(\mu + z_{1-c}\,\sigma)$$
 
 **Monte Carlo VaR** — simulate \(N\) one-day returns \(\sim \mathcal{N}(\mu, \sigma^2)\), take the same empirical quantile.
 
 **CVaR / Expected Shortfall**:
 
-\[
-\mathrm{CVaR}_c = -\mathbb{E}[r \mid r \le - \mathrm{VaR}_c]
-\]
+$$\mathrm{CVaR}_c = -\mathbb{E}[r \mid r \le -\mathrm{VaR}_c]$$
 
 **Sharpe** (annualized, risk-free \(r_f\)):
 
-\[
-\mathrm{Sharpe} = \frac{\bar{r}\cdot 252 - r_f}{\sigma_r\sqrt{252}}
-\]
+$$\mathrm{Sharpe} = \frac{\bar{r}\cdot 252 - r_f}{\sigma_r\sqrt{252}}$$
 
 **Maximum drawdown** — worst peak-to-trough decline on the equity curve.
 
