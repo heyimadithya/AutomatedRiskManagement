@@ -10,7 +10,6 @@ Build a portfolio, pull live Yahoo Finance prices, and compute Value at Risk (Va
 
 **Live demo (GitHub Pages):** https://heyimadithya.github.io/AutomatedRiskManagement/
 
-> GitHub Pages hosts the static UI only (no Python API). The live site shows a cached multi-asset demo. Clone the repo and run the FastAPI backend for live tickers and fresh analysis.
 
 ## What it calculates
 
@@ -52,6 +51,8 @@ Availability depends on Yahoo coverage; some futures / FX spot symbols can be de
 - Live market ticker strip + Refresh
 - FastAPI backend + React frontend (Vite proxies `/api` in local dev)
 
+---
+
 ### Math (short)
 
 **Historical VaR** (confidence \(c\)) — empirical quantile of the left tail:
@@ -79,6 +80,8 @@ $$\mathrm{Sharpe} = \frac{\bar{r}\cdot 252 - r_f}{\sigma_r\sqrt{252}}$$
 **Maximum drawdown** — worst peak-to-trough decline on the equity curve \(V_t\):
 
 $$\mathrm{MDD} = \min_{t}\left(\frac{V_t}{\max_{s\le t} V_s} - 1\right)$$
+
+---
 
 ## Customization
 
