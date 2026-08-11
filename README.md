@@ -62,7 +62,11 @@ $$\mathrm{VaR}_c = -Q_{1-c}(r)$$
 
 $$\mathrm{VaR}_c = -(\mu + z_{1-c}\,\sigma)$$
 
-**Monte Carlo VaR** — simulate \(N\) one-day returns \(\sim \mathcal{N}(\mu, \sigma^2)\), take the same empirical quantile.
+**Monte Carlo VaR** — simulate \(N\) one-day paths, then take the empirical left-tail quantile:
+
+$$r^{(i)} \sim \mathcal{N}(\mu, \sigma^2),\quad i=1,\ldots,N$$
+
+$$\mathrm{VaR}_c^{\mathrm{MC}} = -Q_{1-c}\!\left(r^{(1)},\ldots,r^{(N)}\right)$$
 
 **CVaR / Expected Shortfall**:
 
@@ -72,7 +76,9 @@ $$\mathrm{CVaR}_c = -\mathbb{E}[r \mid r \le -\mathrm{VaR}_c]$$
 
 $$\mathrm{Sharpe} = \frac{\bar{r}\cdot 252 - r_f}{\sigma_r\sqrt{252}}$$
 
-**Maximum drawdown** — worst peak-to-trough decline on the equity curve.
+**Maximum drawdown** — worst peak-to-trough decline on the equity curve \(V_t\):
+
+$$\mathrm{MDD} = \min_{t}\left(\frac{V_t}{\max_{s\le t} V_s} - 1\right)$$
 
 ## Customization
 
