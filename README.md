@@ -53,7 +53,7 @@ Availability depends on Yahoo coverage; some futures / FX spot symbols can be de
 
 ---
 
-### Math (short)
+### Math
 
 **Historical VaR** (confidence \(c\)) — empirical quantile of the left tail:
 
